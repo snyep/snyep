@@ -1,6 +1,7 @@
-var version = 101;
-var andriodUrl = "http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=52164&fileName=SNYEP.plist";
-var iosUrl = "http://172.20.10.2:8088/umserver/SNYEP.apk";
+var andriodUrl="http://112.5.82.146:8008/umserver/ZSYZ.apk";
+var iosUrl="http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=6267&fileName=ZSYZ.plist";
+var andriodVersion="1002";
+var iosVersion="1.0.2
 /**
  * 底部对话框
  */
