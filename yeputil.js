@@ -1,4 +1,3 @@
-
 var version = 101;
 var andriodUrl = "http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=52164&fileName=SNYEP.plist";
 var iosUrl = "http://172.20.10.2:8088/umserver/SNYEP.apk";
@@ -112,6 +111,7 @@ function layerAlert(tital) {
  * 			成功回调函数
  */
 function callAction(viewid, action, params, callback) {
+	layerLoading();
 	summer.callAction({
 		"viewid" : viewid, //后台带包名的Controller名
 		"action" : action, //方法名
@@ -217,6 +217,46 @@ function getNowFormatDate() {//获取年月日
 	 + seperator2 + date.getSeconds();*/
 	return currentdate;
 }
+/**
+ * 获取手机时间
+ * 年-月-日 时分秒
+ */
+function getNowFormatTime() {//获取年月日
+	var date = new Date();
+	var seperator1 = "-";
+	var seperator2 = ":";
+	var month = date.getMonth() + 1;
+	var strDate = date.getDate();
+	if (month >= 1 && month <= 9) {
+		month = "0" + month;
+	}
+	if (strDate >= 0 && strDate <= 9) {
+		strDate = "0" + strDate;
+	}
+	var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate
+	+ " " + date.getHours() + seperator2 + date.getMinutes()
+	 + seperator2 + date.getSeconds();
+	return currentdate;
+}
+
+/**
+ * 获取一周前的日期
+ */
+function getBeforeOneWeekDate(){
+	var now = new Date();
+	var date = new Date(now.getTime() - 7 * 24 * 3600 * 1000);
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var day = date.getDate();
+	if (month >= 1 && month <= 9) {
+		month = "0" + month;
+	}
+	if (day >= 0 && day <= 9) {
+		day = "0" + day;
+	}
+	var beforeDate = year + '-' + month + '-' + day ;
+	return beforeDate;
+}
 
 /**
  * 获取手机时间
@@ -236,6 +276,11 @@ function getNowFormatDateTime() {//获取年月日 时分秒
 	}
 	var currentdate = date.getFullYear() + seperator1 + month + seperator1 + strDate + " " + date.getHours() + seperator2 + date.getMinutes() + seperator2 + date.getSeconds();
 	return currentdate;
+}
+
+function getNowYear(){
+	var date = new Date();
+	return date.getFullYear();
 }
 
 /**
@@ -280,4 +325,20 @@ function isOs() {
 	} else {
 		return "";
 	}
+}
+/**
+ *判断车牌号 
+ */
+function isLicenseNo(str) {
+	return /(^[\u4E00-\u9FA5]{1}[A-Z0-9]{6}$)|(^[A-Z]{2}[A-Z0-9]{2}[A-Z0-9\u4E00-\u9FA5]{1}[A-Z0-9]{4}$)|(^[\u4E00-\u9FA5]{1}[A-Z0-9]{5}[挂学警军港澳]{1}$)|(^[A-Z]{2}[0-9]{5}$)|(^(08|38){1}[A-Z0-9]{4}[A-Z0-9挂学警军港澳]{1}$)/.test(str);
+}
+/**
+ *关闭上一页loading 
+ * @param {Object} lastPageID
+ */
+function closeLastPageLoading(lastPageID){
+	summer.execScript({
+		winId : lastPageID,
+		script : "closeLoading()"
+	});
 }
