@@ -2,6 +2,7 @@ var andriodUrl="http://112.5.82.146:8008/umserver/SNYEP.apk";
 var iosUrl="http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=6267&fileName=ZSYZ.plist";
 var andriodVersion="101";
 var iosVersion="1.0.1";
+
 /**
  * 底部对话框
  */
