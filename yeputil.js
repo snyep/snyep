@@ -115,6 +115,7 @@ function layerAlert(tital) {
 function callAction(viewid, action, params, callback) {
 	layerLoading();
 	summer.callAction({
+		"appid" : "SNYEP",
 		"viewid" : viewid, //后台带包名的Controller名
 		"action" : action, //方法名
 		"params" : params, //自定义参数
