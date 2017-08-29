@@ -133,6 +133,7 @@ function callAction(viewid, action, params, callback) {
 function initInvclCallAction(callback) {
 	var json = {};
 	summer.callAction({
+		"appid" : "SNYEP",
 		"viewid" : "com.yonyou.snyep.controller.main.MainController", //后台带包名的Controller名
 		"action" : "initInvcl", //方法名
 		"params" : json, //自定义参数
@@ -150,6 +151,7 @@ function initInvclCallAction(callback) {
 function initBanerCallAction(callback) {
 	var json = {};
 	summer.callAction({
+		"appid" : "SNYEP",
 		"viewid" : "com.yonyou.snyep.controller.main.MainController", //后台带包名的Controller名
 		"action" : "initBaner", //方法名
 		"params" : json, //自定义参数
