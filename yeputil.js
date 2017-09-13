@@ -7,30 +7,43 @@ var iosVersion="1.0.4";
  * 底部对话框
  */
 function botDialog() {
-	//底部对话框
-	layer.open({
-		content : '是否要退出登录',
-		btn : ['是的，我确定要退出', '我还想留在这'],
-		skin : 'footer',
-		yes : function() {
-			layerAlert("退出");
-			//清除缓存
-			summer.getStorage("loginIngo", " ");
-			layer.closeAll()
-		}
-	});
+	try{
+		//底部对话框
+		layer.open({
+			content : '是否要退出登录',
+			btn : ['是的，我确定要退出', '我还想留在这'],
+			skin : 'footer',
+			yes : function() {
+				layerAlert("退出");
+				//清除缓存
+				summer.getStorage("loginIngo", " ");
+				layer.closeAll()
+			}
+		})
+	}catch (e){
+		alert("网络异常！请稍后重新登录APP尝试！");
+	}
+	
 }
 
 function layerCloseLoading() {
-	layer.closeAll();
+	try{
+		layer.closeAll();
+	}catch(e){
+		alert("网络异常！请稍后重新登录APP尝试！");
+	}
 }
 
 function layerLoading() {
-	layer.open({
-		type : 2,
-		content : '加载中',
-		shadeClose : false
-	});
+	try{
+		layer.open({
+			type : 2,
+			content : '加载中',
+			shadeClose : false
+		});
+	}catch(e){
+		showProgress();
+	}
 }
 
 function showLoading() {
@@ -78,27 +91,35 @@ function checkLoginInfoAndSup(id, url) {
  *  询问提示
  */
 function layerConfirm() {
-	layer.open({
-		content : '尚未登录，是否跳转登入',
-		btn : ['马上登录', '我在看看'],
-		yes : function() {
-			summer.openWin({
-				"id" : "login",
-				"url" : "snyep/login/html/login.html",
-			});
-		}
-	});
+	try{
+		layer.open({
+			content : '尚未登录，是否跳转登入',
+			btn : ['马上登录', '我在看看'],
+			yes : function() {
+				summer.openWin({
+					"id" : "login",
+					"url" : "snyep/login/html/login.html",
+				});
+			}
+		});
+	}catch(e){
+		alert("网络异常！请稍后重新登录APP尝试！");
+	}
 }
 
 /**
  *弹窗提示
  */
 function layerAlert(tital) {
-	layer.open({
-		content : tital,
-		btn : '确定',
-		shadeClose : false
-	});
+	try{
+		layer.open({
+			content : tital,
+			btn : '确定',
+			shadeClose : false
+		});
+	}catch(e){
+		alert("网络异常！请稍后重新登录APP尝试！");
+	}
 }
 
 /**
@@ -113,7 +134,6 @@ function layerAlert(tital) {
  * 			成功回调函数
  */
 function callAction(viewid, action, params, callback) {
-	layerLoading();
 	summer.callAction({
 		"appid" : "SNYEP",
 		"viewid" : viewid, //后台带包名的Controller名
