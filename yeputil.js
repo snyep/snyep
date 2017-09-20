@@ -32,6 +32,11 @@ function comdify(n){
 　　var n1=n.replace(/^(\d+)((\.\d+)?)$/,function(s,s1,s2){return s1.replace(re,"$&,")+s2;});
 　　return n1;
 }
+function formatnum(n){
+	n=n.replace(/[^0-9]/ig,'');
+   n=n.replace(/,/g,'');
+   return n;
+}
 function layerCloseLoading() {
 	try{
 		layer.closeAll();
