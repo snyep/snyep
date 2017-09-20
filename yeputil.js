@@ -25,7 +25,13 @@ function botDialog() {
 	}
 	
 }
-
+function comdify(n){
+   n=n.replace(/[^0-9]/ig,'');
+   n=n.replace(/,/g,'');
+　　var re=/\d{1,3}(?=(\d{3})+$)/g;
+　　var n1=n.replace(/^(\d+)((\.\d+)?)$/,function(s,s1,s2){return s1.replace(re,"$&,")+s2;});
+　　return n1;
+}
 function layerCloseLoading() {
 	try{
 		layer.closeAll();
