@@ -130,7 +130,7 @@ function layerConfirm() {
 	try{
 		layer.open({
 			content : '尚未登录，是否跳转登入',
-			btn : ['马上登录', '我在看看'],
+			btn : ['马上登录', '我再看看'],
 			yes : function() {
 				summer.openWin({
 					"id" : "login",
