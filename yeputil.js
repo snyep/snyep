@@ -129,7 +129,7 @@ function checkLoginInfoAndSup(id, url) {
 function layerConfirm() {
 	try{
 		layer.open({
-			content : '尚未登录，是否跳转登入',
+			content : '您尚未登录，并无此操作/查看权限。是否跳转登入？',
 			btn : ['马上登录', '我再看看'],
 			yes : function() {
 				summer.openWin({
