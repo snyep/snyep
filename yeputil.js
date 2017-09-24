@@ -1,7 +1,7 @@
 var andriodUrl="http://222.78.251.54:40020/umserver/SNYEP/SNYEP.apk";
-var iosUrl="http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=12258&fileName=SNYEP.plist";
-var andriodVersion="1082";
-var iosVersion="1.0.82";
+var iosUrl="http://mbs.yyuap.com:8080/ump/web/appdownload/download?type=ios&buildId=12377&fileName=SNYEP.plist";
+var andriodVersion="1083";
+var iosVersion="1.0.83";
 
 /**
  * 底部对话框
