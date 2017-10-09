@@ -318,7 +318,24 @@ function getBeforeOneWeekDate(){
 	var beforeDate = year + '-' + month + '-' + day ;
 	return beforeDate;
 }
-
+/**
+ * 获取30天前的日期
+ */
+function getBeforeOneMonthDate(){
+	var now = new Date();
+	var date = new Date(now.getTime() - 30 * 24 * 3600 * 1000);
+	var year = date.getFullYear();
+	var month = date.getMonth() + 1;
+	var day = date.getDate();
+	if (month >= 1 && month <= 9) {
+		month = "0" + month;
+	}
+	if (day >= 0 && day <= 9) {
+		day = "0" + day;
+	}
+	var beforeDate = year + '-' + month + '-' + day ;
+	return beforeDate;
+}
 /**
  * 获取手机时间
  * 年-月-日 时:分:秒
