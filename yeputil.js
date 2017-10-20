@@ -372,7 +372,24 @@ function round(num, d) {
 	//Step：返回num缩小10的d次方倍，获得最终结果
 	return num / Math.pow(10, d);
 }
-
+function toDecimal(x,y) {    
+        var f = parseFloat(x);    
+        if (isNaN(f)) {    
+            return false;    
+        }    
+        var pow = Math.pow(10, y);
+        var f = Math.round(x*pow)/pow;    
+        var s = f.toString();    
+        var rs = s.indexOf('.');    
+        if (rs < 0) {    
+            rs = s.length;    
+            s += '.';    
+        }    
+        while (s.length <= rs + y) {    
+            s += '0';    
+        }    
+        return s;    
+    } 
 function isOs() {
 	var browser = {
 		info : function() {
