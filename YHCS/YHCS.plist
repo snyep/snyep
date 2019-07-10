@@ -1,26 +1,4 @@
-Skip to content
- 
-Search or jump to¡­
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@snyep 
- Watch 0
- Star 0  Fork 0 snyep/snyep
- Code  Issues 0  Pull requests 0  Projects 0  Wiki  Security  Insights  Settings
-Branch: master 
-snyep/SNYEPCS/SNYEP.plist
-Find file Copy path
-@snyep snyep Update SNYEP.plist
-2d5ed9d on 14 Nov 2017
-1 contributor
-50 lines (49 sloc)  1.21 KB
-RawBlameHistory
-    
-<?xml version="1.0" encoding="UTF-8"?>
+ <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
@@ -33,7 +11,7 @@ RawBlameHistory
 					<key>kind</key>
 					<string>software-package</string>
 					<key>url</key>
-					<string>https://snyep.github.io/snyep/SNYEPCS/SNYEP.ipa</string>
+					<string>https://snyep.github.io/snyep/YHCS/SNYEP.ipa</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -41,7 +19,7 @@ RawBlameHistory
 					<key>needs-shine</key>
 					<true/>
 					<key>url</key>
-					<string>https://snyep.github.io/snyep/SNYEPCS/download_photo_app.png</string>
+					<string>https://snyep.github.io/snyep/YHCS/download_photo_app.png</string>
 				</dict>
 				<dict>
 					<key>kind</key>
@@ -49,13 +27,13 @@ RawBlameHistory
 					<key>needs-shine</key>
 					<true/>
 					<key>url</key>
-					<string>https://snyep.github.io/snyep/SNYEPCS/download_photo_app.png</string>
+					<string>https://snyep.github.io/snyep/YHCS/download_photo_app.png</string>
 				</dict>
 			</array>
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.yonyou.snyepcs</string>
+				<string>com.yonyou.yhcs</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
@@ -63,7 +41,7 @@ RawBlameHistory
 				<key>subtitle</key>
 				<string></string>
 				<key>title</key>
-				<string>²âÊÔÊ¥Å©ÔÆ²É</string>
+				<string>ç²¤æµ·äº‘é‡‡æµ‹è¯•ç‰ˆ</string>
 			</dict>
 		</dict>
 	</array>
