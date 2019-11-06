@@ -33,7 +33,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>com.yonyou.snyepcs</string>
+				<string>com.yonyou.yhcs</string>
 				<key>bundle-version</key>
 				<string>1.0</string>
 				<key>kind</key>
@@ -41,7 +41,7 @@
 				<key>subtitle</key>
 				<string></string>
 				<key>title</key>
-				<string>²âÊÔÊ¥Å©ÔÆ²É</string>
+				<string>åœ£å†œäº‘é‡‡</string>
 			</dict>
 		</dict>
 	</array>
